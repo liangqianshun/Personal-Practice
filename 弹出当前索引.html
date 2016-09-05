@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<ul id="ul1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+    //    window.onload=function(){
+    //        var Oul=document.getElementById("ul1");
+    //        var Oli=Oul.getElementsByTagName("li");
+    //        for(var i=0;i<Oli.length;i++){
+    //            Oli[i].index=i;
+    //            Oli[i].onclick=function(){
+    //                var j=this.index+1;
+    //                alert(j)
+    //            }
+    //        }
+    //    };
+    //也可以用jquery来实现
+    //    $("ul li").click(function(){
+    //        alert($(this).index()+1)
+    //    });
+    //应用es6的方法来实现
+    /**
+     * 用es6的新特性---let来声明变量，使它具有块级作用域。需要注意的是加个"use strict"（使用严格模式）才会生效
+     */
+function fn(){'use strict';
+        var Oul = document.getElementById("ul1");
+        var Oli = Oul.getElementsByTagName("li");
+        for(let i=0;i<Oli.length;i++){
+        Oli[i].onclick=function(){
+            alert(i+1+"......"+this.innerHTML)
+        }
+        }
+    }
+    fn();
+</script>
+</body>
+</html>
