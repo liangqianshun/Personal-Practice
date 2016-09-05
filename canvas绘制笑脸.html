@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<canvas id="canvas" width="640" height="480"></canvas>
+<script type="text/javascript">
+    var c=document.getElementById("canvas");
+    var context= c.getContext("2d");
+    context.fillStyle="yellow";
+    context.strokeStyle="black";
+    context.beginPath();
+    context.arc(320,240,200,0,2*Math.PI);
+    context.fill();
+    context.stroke();
+    context.closePath();
+    context.fillStyle="white";
+    context.beginPath();
+    context.arc(270,175,30,0,2*Math.PI);
+    context.fill();
+    context.stroke();
+    context.closePath();
+    context.beginPath();
+    context.arc(370,175,30,0,2*Math.PI);
+    context.fill();
+    context.stroke();
+    context.closePath();
+    context.fillStyle="black";
+    context.beginPath();
+    context.arc(280,165,18,0,2*Math.PI);
+    context.fill();
+    context.stroke();
+    context.closePath();
+    context.beginPath();
+    context.arc(380,165,18,0,2*Math.PI);
+    context.fill();
+    context.stroke();
+    context.closePath();
+    context.fillStyle="red";
+    context.beginPath();
+    context.arc(320,240,150,0,-1*Math.PI);
+    context.fill();
+    context.stroke();
+    context.closePath();
+</script>
+</body>
+</html>
