@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>css3综合练习</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        a, a:visited { color: #000;}
+
+        * ul li {
+            list-style: none;
+        }
+
+        body {
+            background: #848484; /* Fallback image for shitty browsers*/
+        }
+
+        #header {
+            background: url(images/header.png) no-repeat top center;
+            width: 960px;
+            height: 100px;
+            margin: 20px auto;
+            text-indent: -9999px;
+        }
+
+        #wrapper {
+            width: 940px;
+           height:100%;
+            background: #fff;
+            overflow:hidden;
+            margin:0 auto 60px auto;
+            border:6px solid;
+            -webkit-border-image:url("images/hu-3.jpg")6 6 6 6 stretch;
+            -moz-border-image:url("images/hu-3.jpg")6 6 6 6 stretch;
+            -o-border-image:url("images/hu-3.jpg")6 6 6 6 stretch;
+            border-image:url("images/hu-3.jpg")6 6 6 6 stretch;
+            -webkit-box-shadow: rgba(0,0,0,.6) 0 0 12px;
+            -moz-box-shadow: rgba(0,0,0,.6) 0 0 12px;
+            box-shadow: rgba(0,0,0,.6) 0 0 12px;
+        }
+
+        #topnav > ul {
+            display: inline-block;
+        }
+        #topnav ul li a,#wp-bom #bom-shen a{
+            display:block;
+            width: 240px;
+            color:#fff;
+            background: rgba(70, 70, 70, 1.0);
+            height: 30px;
+            margin:10px auto 0 10px;
+            padding-top: 20px;
+            text-align:center;
+            text-decoration:none;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+
+            -webkit-transition-property: background-color, font-size;
+            -webkit-transition-duration: 800ms ,300ms;
+            -o-transition-property: background-color, font-size;
+            -o-transition-duration: 800ms ,300ms;
+            -moz-transition-property: background-color, font-size;
+            -moz-transition-duration: 800ms ,300ms;
+            transition-property: background-color, font-size;
+            transition-duration: 800ms ,300ms;
+
+            -moz-border-radius: 8px;
+            -webkit-border-radius: 8px;
+            border-radius: 8px;
+
+            text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.7);
+
+        }
+        #topnav ul li a:hover{
+            background: rgba(70, 70, 70, 0.8);
+            font-size: 1.5em;
+            z-index: 9999;
+        }
+        #wp-bom #bom-shen a{
+            position: relative;
+            top:-70px;
+        }
+        #wp-bom #bom-shen a:hover{
+            background: rgba(70, 70, 70, 0.8);
+            font-size: 1.5em;
+            z-index: 9999;
+        }
+    #fonz{
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+        display: block;
+        -webkit-border-radius:200px;
+        -moz-border-radius:200px;
+        border-radius:200px;
+        /* 设置默认样式，开启3d硬件加速 */
+        -webkit-transform:translate3d(0,0,0);
+        -moz-transform:translate3d(0,0,0);
+        transform:translate3d(0,0,0);
+        /* 设置动画，animation:动画名称 动画播放时长单位秒或微秒 动画播放的速度曲线linear为匀速 动画播放次数infinite为循环播放; */
+        -webkit-animation:play 3s linear infinite;
+        -moz-animation:play 3s linear infinite;
+        animation:play 3s linear infinite;
+    }
+        @-webkit-keyframes play{
+            0%  {
+                /*
+                水平翻转
+                */
+                -webkit-transform:rotateY(0deg);
+                /*
+                垂直翻转
+                -webkit-transform:rotateX(0deg);
+                顺时针旋转
+                -webkit-transform:rotate(0deg);
+                逆时针旋转
+                -webkit-transform:rotate(0deg);
+                */
+            }
+            100% {
+                /* 水平翻转 */
+                -webkit-transform:rotateY(360deg);
+                /* 垂直翻转
+                -webkit-transform:rotateX(360deg);
+                顺时针旋转
+                -webkit-transform:rotate(360deg);
+                逆时针旋转
+                -webkit-transform:rotate(-360deg);
+                */
+            }
+        }
+        @-moz-keyframes play{
+            0%  {
+                -moz-transform:rotateY(0deg);
+                /*
+                -moz-transform:rotateX(0deg);
+                -moz-transform:rotate(0deg);
+                -moz-transform:rotate(0deg);
+                */
+            }
+            100% {
+                -moz-transform:rotateY(360deg);
+                /*
+                -moz-transform:rotateX(360deg);
+                -moz-transform:rotate(360deg);
+                -moz-transform:rotate(-360deg);
+                */
+            }
+        }
+        @keyframes play{
+            0%  {
+                transform:rotateY(0deg);
+                /*
+                transform:rotateX(0deg);
+                transform:rotate(0deg);
+                transform:rotate(0deg);
+                */
+            }
+            100% {
+                transform:rotateY(360deg);
+                /*
+                transform:rotateX(360deg);
+                transform:rotate(360deg);
+                transform:rotate(-360deg);
+                */
+    }
+        }
+        #fonz:hover{
+            -moz-animation: spin 2s infinite  linear;
+            -webkit-animation: spin 2s  infinite linear;
+            -o-animation:spin 2s  infinite linear;
+            animation:spin 2s  infinite linear;
+        }
+      #huhuizhong{
+         clear:both;
+          margin:20px;
+          float:right;
+      }
+        #md-text {
+            margin: 0 19px;
+            clear: both;
+
+            -webkit-column-width: 288px;
+            -moz-column-width: 288px;
+            column-width: 288px;
+
+            -webkit-column-gap: 19px;
+            -moz-column-gap: 19px;
+            column-gap: 19px;
+
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+        }
+
+        #md-text p {
+            text-indent: 2em;
+            line-height: 1.5em;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+        #wp-bom .nvshen{
+            display: inline-block;
+            margin:19px;
+            width:120px;
+            height:285px;
+            border:1px solid;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 5px;
+        }
+        #wp-bom #nv-1{
+            background:url("images/四大美女.jpg") no-repeat -7px -30px;
+        }
+        #wp-bom #nv-2{
+            background:url("images/四大美女.jpg") no-repeat -172px -75px;
+        }
+        #wp-bom #nv-3{
+            background:url("images/四大美女.jpg") no-repeat -485px -75px;
+        }
+        #wp-bom #nv-4{
+            background:url("images/四大美女.jpg") no-repeat -330px -30px;
+        }
+
+
+        #wp-bom > li {
+            display: inline-block;
+        }
+        #footer{
+            clear: both;
+            padding: 20px 10px;
+            background: rgba(0,0,0,0.9);
+            height: 70px;
+            color: #fff;
+            text-shadow:2px 1px 1px rgba(223, 223, 223, 0.4);
+            font-size: 0.8em;
+            letter-spacing: 0.02em;
+            overflow: hidden;
+        }
+        #footer a {
+            color: #EFEFEF;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(223, 223, 223, 0.2);
+        }
+        #footer ul{
+            width: 960px;
+            margin: 5px auto;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<header id="header"></header>
+<div id="wrapper">
+    <div id="topnav">
+        <ul id="leftnav">
+            <li><a href="#">沉鱼</a></li>
+            <li><a href="#">落雁</a></li>
+            <li><a href="#">闭月</a></li>
+            <li><a href="#">羞花</a></li>
+            <li><img src="images/hu-3.jpg" alt="胡慧中" id="fonz"/></li>
+        </ul>
+        <div id="huhuizhong">
+            <img src="images/hu-1.jpg" alt="胡慧中" style=" width:300px; height:500px;">
+            <img src="images/wang-1.jpeg" alt="王祖贤" style="width:300px;height:500px;"/>
+        </div>
+    </div>
+
+
+    <div id="md-text">
+        <p>黄初三年，余朝京师，还济洛川。古人有言，斯水之神，名曰宓妃。感宋玉对楚王神女之事，遂作斯赋，其词曰：</p>
+
+        <p>余从京域，言归东藩，背伊阙
+            ，越轘辕，经通谷，陵景山。日既西倾，车殆马烦。尔乃税驾乎蘅皋，秣驷乎芝田，容与乎阳林，流眄乎洛川。于是精移神骇，忽焉思散。俯则未察，仰以殊观。睹一丽人，于岩之畔。乃援御者而告之曰：“尔有觌于彼者乎？彼何人斯，若此之艳也！”御者对曰：“臣闻河洛之神，名曰宓妃。然则君王所见，无乃是乎？其状若何，臣愿闻之。”</p>
+
+        <p>
+            余告之曰：其形也，翩若惊鸿，婉若游龙，荣曜秋菊，华茂春松。髣髴兮若轻云之蔽月，飘飖兮若流风之回雪。远而望之，皎若太阳升朝霞。迫而察之，灼若芙蕖出渌波。秾纤得衷，修短合度。肩若削成，腰如约素。延颈秀项，皓质呈露，芳泽无加，铅华弗御。云髻峨峨，修眉联娟，丹唇外朗，皓齿内鲜。明眸善睐，靥辅承权，瓌姿艳逸，仪静体闲。柔情绰态，媚于语言。奇服旷世，骨像应图。披罗衣之璀粲兮，珥瑶碧之华琚。戴金翠之首饰，缀明珠以耀躯。践远游之文履，曳雾绡之轻裾。微幽兰之芳蔼兮，步踟蹰于山隅。于是忽焉纵体，以遨以嬉。左倚采旄，右荫桂旗。攘皓腕于神浒兮，采湍濑之玄芝。</p>
+
+        <p>
+            余情悦其淑美兮，心振荡而不怡。无良媒以接欢兮，托微波而通辞。愿诚素之先达兮，解玉佩以要之。嗟佳人之信修，羌习礼而明诗。抗琼珶以和予兮，指潜渊而为期。执眷眷之款实兮，惧斯灵之我欺。感交甫之弃言兮，怅犹豫而狐疑。收和颜而静志兮，申礼防以自持。</p>
+
+        <p>于是洛灵感焉，徙倚彷徨。神光离合，乍阴乍阳。竦轻躯以鹤立，若将飞而未翔。践椒涂之郁烈，步蘅薄而流芳。超长吟以永慕兮，声哀厉而弥长。
+            尔乃众灵杂遝，命俦啸侣。或戏清流，或翔神渚。或采明珠，或拾翠羽。从南湘之二妃，携汉滨之游女。叹匏瓜之无匹兮，咏牵牛之独处。扬轻袿之猗靡兮，翳修袖以延伫。体迅飞凫，飘忽若神。凌波微步，罗袜生尘。动无常则，若危若安。进止难期，若往若还。转眄流精，光润玉颜。含辞未吐，气若幽兰。华容婀娜，令我忘餐。</p>
+
+        <p>
+            于是屏翳收风，川后静波。冯夷鸣鼓，女娲清歌。腾文鱼以警乘，鸣玉鸾以偕逝。六龙俨其齐首，载云车之容裔。鲸鲵踊而夹毂，水禽翔而为卫。于是越北沚，过南冈，纡素领，回清阳，动朱唇以徐言，陈交接之大纲。恨人神之道殊兮，怨盛年之莫当。抗罗袂以掩涕兮，泪流襟之浪浪。悼良会之永绝兮，哀一逝而异乡。无微情以效爱兮，献江南之明珰。虽潜处于太阴，长寄心于君王。忽不悟其所舍，怅神宵而蔽光。</p>
+
+        <p>于是背下陵高，足往神留。遗情想像，顾望怀愁。冀灵体之复形，御轻舟而上溯。浮长川而忘返，思绵绵而增慕。夜耿耿而不寐，沾繁霜而至曙。命仆夫而就驾，吾将归乎东路。揽騑辔以抗策，怅盘桓而不能去。</p>
+    </div>
+    <ul id="wp-bom">
+        <li>
+            <ul>
+                <li id="nv-1" class="nvshen"></li>
+                <li id="nv-2" class="nvshen"></li>
+                <li id="nv-3" class="nvshen"></li>
+                <li id="nv-4" class="nvshen"></li>
+            </ul>
+        </li>
+        <li>
+            <ul id="bom-shen">
+                <li><a href="#">西施浣纱</a></li>
+                <li><a href="#">昭君出塞</a></li>
+                <li><a href="#">貂蝉拜月</a></li>
+                <li><a href="#">贵妃醉酒</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<footer id="footer">
+    <ul id="ft-bom">
+        <li>绿衫捧砚催题卷，红袖添香伴读书！</li>
+        <li>醉卧美人膝，醒掌天下权！</li>
+        <li>如果你想了解更多的信息请关注： <a href="https://github.com/liangqianshun">梁乾顺的github账号</a></li>
+    </ul>
+</footer>
+</body>
+</html>
