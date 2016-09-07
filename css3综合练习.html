@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <title>css3综合练习</title>
     <style type="text/css">
-        * {
-            margin: 0;
-            padding: 0;
-        }
 
         a {
             text-decoration: none;
@@ -49,6 +45,17 @@
         #topnav > ul {
             display: inline-block;
         }
+        #bom-shen, #leftnav{
+            margin: 19px;
+            width: 240px;
+            position: relative;
+            z-index: 1;
+        }
+       #bom-shen>li, #leftnav>li{
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 9999;
+        }
         #topnav ul li a,#wp-bom #bom-shen a{
             display:block;
             width: 240px;
@@ -85,7 +92,8 @@
         }
         #wp-bom #bom-shen a{
             position: relative;
-            top:-70px;
+            top:-10px;
+            left:-23px;
         }
         #wp-bom #bom-shen a:hover{
             background: rgba(70, 70, 70, 0.8);
@@ -179,9 +187,14 @@
             animation:spin 2s  infinite linear;
         }
       #huhuizhong{
-         clear:both;
-          margin:20px;
+          margin:25px;
           float:right;
+      }
+      #huhuizhong img{
+          width:280px;
+          height:500px;
+          border:1px solid;
+          border-radius:10px;
       }
         #md-text {
             margin: 0 19px;
@@ -208,7 +221,6 @@
         }
         #wp-bom .nvshen{
             display: inline-block;
-            margin:19px;
             width:120px;
             height:285px;
             border:1px solid;
@@ -232,6 +244,7 @@
 
         #wp-bom > li {
             display: inline-block;
+            overflow: hidden;
         }
         #footer{
             clear: both;
@@ -248,6 +261,9 @@
             color: #EFEFEF;
             text-decoration: none;
             border-bottom: 1px dotted rgba(223, 223, 223, 0.2);
+        }
+        #footer a:hover{
+            color:#152b59;
         }
         #footer ul{
             width: 960px;
@@ -269,8 +285,8 @@
             <li><img src="images/hu-3.jpg" alt="胡慧中" id="fonz"/></li>
         </ul>
         <div id="huhuizhong">
-            <img src="images/hu-1.jpg" alt="胡慧中" style=" width:300px; height:500px;">
-            <img src="images/wang-1.jpeg" alt="王祖贤" style="width:300px;height:500px;"/>
+            <img src="images/hu-1.jpg" alt="胡慧中" style=" width:280px; height:500px;">
+            <img src="images/wang-14.jpg" alt="王祖贤" style="width:280px;height:500px;"/>
         </div>
     </div>
 
