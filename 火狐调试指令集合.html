@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body><p>
+    firebug调试指令console
+    console.warn('这里是警告');
+    console.error('这里是错误');
+    分组
+    console.group('第一组');
+    console.log(1);
+    console.groupEnd();
+    输出信息
+    console.log();
+    console.dir(cat);  //输出所有信息*/
+    console.dirxml(oDiv); //显示当前元素的代码结构
+    断言
+    console.assert(0);
+    console.assert(20 == '20');//为真不输出，为假浏览器显示断言失败
+    函数调用情况
+    console.trace();
+    例子
+    function a(){return b();}
+    function b(){return c();}
+    function c(){console.trace();return 1;} a();
+    函数执行的时间
+    console.time('name')//必须有名字
+    console.time('计时器');
+    for(var i=0;i<1000000;i++){
+    }
+    console.timeEnd('计时器');
+    函数性能优化查看
+    console.profile()//可以没有名字，可以直接在firebug下面的概况查看
+    function a(){for(var i=0;i<10;i++){b(); }for(var i=0;i<5;i++){c();}function b(){var b = 10;}function c(){var c = 20;}}
+    console.profile();
+    a();
+    console.profileEnd();
+    ie浏览器使用firebug地址 http://getfirebug.com/firebuglite/
+    可以直接使用 直接head引入下面script代码嵌入需要调试的页面
+</p>
+</body>
+</html>
