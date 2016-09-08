@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+</head>
+<body>
+<div class="swiper-container" style="width: 38%;"><!--swiper容器[可以随意更改该容器的样式-->
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/wang-3.jpeg" style="width:500px;height:400px;">
+        </div>
+        <div class="swiper-slide"><img src="images/wang-11.jpg" style="width:500px;height:400px;"></div>
+        <div class="swiper-slide"><img src="images/wang-2.jpg" style="width:500px;height:400px;"></div>
+    </div>
+    <div class="swiper-pagination" style="width: 100px;float: right"></div><!--分页器-->
+    <div class="swiper-button-prev"></div><!--前进按钮-->
+    <div class="swiper-button-next"></div><!--后退按钮-->
+</div>
+
+<script type="text/javascript">
+    var mySwiper = new Swiper(".swiper-container",{
+        direction:"horizontal",/*横向滑动*/
+        loop:true,/*形成环路（即：可以从最后一张图跳转到第一张图*/
+        pagination:".swiper-pagination",/*分页器*/
+        prevButton:".swiper-button-prev",/*前进按钮*/
+        nextButton:".swiper-button-next",/*后退按钮*/
+        autoplay:3000/*每隔3秒自动播放*/
+    })
+    //    var mySwiper = new Swiper(".swiper-container",{
+    //        effect:"coverflow",/*轮播的效果：（1）fade:淡入淡出；（2）cube:立方体；（3）coverflow:立体照片*/
+    //        slidesPerView:3,/*网格分布：1为在容器区域出现一张图；2：在容器区域出现两张图；3：在容器区域出现三张图*/
+    //        centeredSlides:true,/*默认第一块居左，设置为true后则是居中显示*/
+    //        coverflow:{
+    //            rotate:20,/*3d旋转角度设置为30度*/
+    //            stretch:10,/*每个slide之间的拉伸值，值越大靠得越近*/
+    //            depth:60,/*位置深度，值越大离Z轴越远，看起来越小*/
+    //            modifier:2,
+    //            slideshadows:true/*开启阴影*/
+    //        }
+    //    })
+</script>
+</body>
+</html>
